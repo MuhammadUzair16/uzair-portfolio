@@ -108,7 +108,7 @@ const Contact = () => {
         <div className="flex flex-col justify-center items-center w-full md:w-1/2 h-full mt-8 md:mt-0 px-4 sm:px-0">
           <div className="w-full max-w-md sm:max-w-lg bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.2)] p-4 sm:p-8 relative">
             <h3 className="text-2xl font-bold text-white mb-6 text-center" style={{ fontFamily: 'Poppins, Inter, sans-serif' }}>
-              Contact Form
+              Contact Me
             </h3>
             {showPopup && (
               <div className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-6 py-3 rounded-xl shadow-lg z-20 text-center text-base font-semibold animate-fade-in">
