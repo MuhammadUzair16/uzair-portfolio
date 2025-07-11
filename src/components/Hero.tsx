@@ -291,6 +291,23 @@ const Hero = () => {
                   loading="lazy"
                 />
               </div>
+              {/* Floating Icons for Mobile */}
+              <motion.div
+                className="absolute -right-4 top-8 bg-slate-800/90 backdrop-blur-sm border border-slate-700/50 rounded-xl p-2 shadow-xl lg:hidden"
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" as const }}
+                style={{ zIndex: 20 }}
+              >
+                <Code className="w-5 h-5 text-blue-400" />
+              </motion.div>
+              <motion.div
+                className="absolute -left-4 bottom-8 bg-slate-800/90 backdrop-blur-sm border border-slate-700/50 rounded-xl p-2 shadow-xl lg:hidden"
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" as const, delay: 1 }}
+                style={{ zIndex: 20 }}
+              >
+                <Database className="w-5 h-5 text-purple-400" />
+              </motion.div>
             </div>
           </div>
           <motion.div variants={itemVariants} className="text-center space-y-6">
@@ -315,7 +332,7 @@ const Hero = () => {
               ))}
             </div>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed" style={{ fontFamily: 'Inter, DM Sans, sans-serif' }}>
-              Full-Stack Developer crafting innovative digital solutions with cutting-edge technologies.
+              Passionate Python Backend Developer experienced in Django, REST frameworks, and database-driven web systems
             </p>
           </motion.div>
           {/* CTA Buttons - Full width, stacked */}
