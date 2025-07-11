@@ -65,7 +65,7 @@ const skills = [
 
 const socialLinks = [
   { icon: Github, href: 'https://github.com/muhammaduzair16', label: 'GitHub' },
-  { icon: Linkedin, href: 'https://linkedin.com/in/uzairdev', label: 'LinkedIn' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/muhammad-uzair-07920a294', label: 'LinkedIn' },
   { icon: Download, href: '/uzairresume.pdf', label: 'Download CV', download: true }
 ];
 
