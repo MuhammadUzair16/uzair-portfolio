@@ -281,6 +281,8 @@ const Hero = () => {
           {/* Hero Image Always Visible on Mobile */}
           <div className="flex justify-center pt-4">
             <div className="relative w-60 h-64 sm:w-72 sm:h-64 overflow-hidden flex items-start">
+              {/* Floating Icons for Mobile - more outside image border, above image */}
+              {/* End Floating Icons */}
               <div className="absolute -inset-4 bg-blue-500/20 rounded-2xl blur-2xl" />
               <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-xl bg-slate-800/50 border border-slate-700/50">
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 via-transparent to-purple-900/20 z-10" />
@@ -291,23 +293,6 @@ const Hero = () => {
                   loading="lazy"
                 />
               </div>
-              {/* Floating Icons for Mobile */}
-              <motion.div
-                className="absolute -right-4 top-8 bg-slate-800/90 backdrop-blur-sm border border-slate-700/50 rounded-xl p-2 shadow-xl lg:hidden"
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" as const }}
-                style={{ zIndex: 20 }}
-              >
-                <Code className="w-5 h-5 text-blue-400" />
-              </motion.div>
-              <motion.div
-                className="absolute -left-4 bottom-8 bg-slate-800/90 backdrop-blur-sm border border-slate-700/50 rounded-xl p-2 shadow-xl lg:hidden"
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" as const, delay: 1 }}
-                style={{ zIndex: 20 }}
-              >
-                <Database className="w-5 h-5 text-purple-400" />
-              </motion.div>
             </div>
           </div>
           <motion.div variants={itemVariants} className="text-center space-y-6">
