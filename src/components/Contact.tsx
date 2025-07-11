@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// ...other imports
 import { MapPin, Phone, Mail, Github, Linkedin, Download } from "lucide-react";
 
 const Contact = () => {
@@ -31,84 +30,101 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-[#0A0A0F] min-h-screen flex items-center relative overflow-hidden">
-      {/* Full-section Gradient background accent */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 via-purple-900/30 to-transparent pointer-events-none z-0" />
-      <div className="w-full flex flex-col md:flex-row h-auto md:h-[70vh] min-h-[500px] relative z-10">
-        {/* Left Side: Enhanced Get in Touch */}
-        <div className="flex flex-col justify-center items-center md:items-start w-full md:w-1/2 px-4 sm:px-8 py-8">
-          {/* Heading with glow */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 text-center md:text-left text-glow" style={{ fontFamily: 'Poppins, Inter, sans-serif' }}>
-            Get in Touch
+    <section id="contact" className="py-20 bg-[#0A0A0F]">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4" style={{ fontFamily: 'Poppins, Inter, sans-serif' }}>
+            Get In Touch
           </h2>
-          {/* Contact Info Group */}
-          <div className="flex flex-col gap-4 mb-6">
-            <div className="flex items-center gap-3 text-slate-200 text-base sm:text-lg">
-              <MapPin className="w-5 h-5 text-blue-400" />
-              <span className="font-semibold text-blue-400">Location:</span>
-              <span>Islamabad, PK</span>
-            </div>
-            <div className="flex items-center gap-3 text-slate-200 text-base sm:text-lg">
-              <Phone className="w-5 h-5 text-blue-400" />
-              <span className="font-semibold text-blue-400">Phone:</span>
-              <a href="tel:+923149477077" className="hover:text-blue-400 transition-colors">+92 (314) 9477077</a>
-            </div>
-            <div className="flex items-center gap-3 text-slate-200 text-base sm:text-lg">
-              <Mail className="w-5 h-5 text-blue-400" />
-              <span className="font-semibold text-blue-400">Email:</span>
-              <a href="mailto:uk200114@gmail.com" className="hover:text-blue-400 transition-colors">uk200114@gmail.com</a>
-            </div>
-          </div>
-          {/* Social Links Group */}
-          <div className="flex gap-5 mb-8">
-            <a
-              href="https://github.com/muhammaduzair16"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-slate-800/60 rounded-full text-slate-400 hover:text-white hover:bg-blue-600/30 transition-colors shadow-lg"
-              aria-label="GitHub"
-            >
-              <Github className="w-6 h-6" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/muhammad-uzair-07920a294"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-3 bg-slate-800/60 rounded-full text-slate-400 hover:text-white hover:bg-blue-600/30 transition-colors shadow-lg"
-              aria-label="LinkedIn"
-            >
-              <Linkedin className="w-6 h-6" />
-            </a>
-            <a
-              href="mailto:uk200114@gmail.com"
-              className="p-3 bg-slate-800/60 rounded-full text-slate-400 hover:text-white hover:bg-blue-600/30 transition-colors shadow-lg"
-              aria-label="Email"
-            >
-              <Mail className="w-6 h-6" />
-            </a>
-            <a
-              href="/uzairresume.pdf"
-              download
-              className="p-3 bg-slate-800/60 rounded-full text-slate-400 hover:text-white hover:bg-blue-600/30 transition-colors shadow-lg"
-              aria-label="Download Resume"
-            >
-              <Download className="w-6 h-6" />
-            </a>
-          </div>
-          {/* Download Resume Button */}
-          <a
-            href="/uzairresume.pdf"
-            download
-            className="inline-block px-8 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all text-center text-lg tracking-wide"
-          >
-            Download Resume
-          </a>
+          <p className="text-xl text-slate-300 max-w-2xl mx-auto" style={{ fontFamily: 'Inter, DM Sans, sans-serif' }}>
+            Ready to collaborate or discuss opportunities? I'd love to hear from you.
+          </p>
         </div>
-        {/* Right Side: Contact Form in Card */}
-        <div className="flex flex-col justify-center items-center w-full md:w-1/2 h-full mt-8 md:mt-0 px-4 sm:px-0">
-          <div className="w-full max-w-md sm:max-w-lg bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.2)] p-4 sm:p-8 relative">
-            <h3 className="text-2xl font-bold text-white mb-6 text-center" style={{ fontFamily: 'Poppins, Inter, sans-serif' }}>
-              Contact Me
+        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {/* Contact Info */}
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-6" style={{ fontFamily: 'Poppins, Inter, sans-serif' }}>
+                Let's Connect
+              </h3>
+              <p className="text-slate-300 mb-8 leading-relaxed" style={{ fontFamily: 'Inter, DM Sans, sans-serif' }}>
+                I'm always open to discussing new opportunities, interesting projects, 
+                or just having a conversation about technology and development.
+              </p>
+            </div>
+            <div className="space-y-6">
+              <div className="flex items-center gap-4">
+                <div className="p-3 bg-gradient-to-br from-blue-600/30 to-purple-600/30 rounded-xl">
+                  <Mail className="w-5 h-5 text-blue-400" />
+                </div>
+                <div>
+                  <p className="text-white font-semibold" style={{ fontFamily: 'Poppins, Inter, sans-serif' }}>Email</p>
+                  <a href="mailto:uk200114@gmail.com" className="text-slate-300 hover:text-blue-400 transition-colors">
+                    uk200114@gmail.com
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="p-3 bg-gradient-to-br from-blue-600/30 to-purple-600/30 rounded-xl">
+                  <Phone className="w-5 h-5 text-blue-400" />
+                </div>
+                <div>
+                  <p className="text-white font-semibold" style={{ fontFamily: 'Poppins, Inter, sans-serif' }}>Phone</p>
+                  <a href="tel:+923149477077" className="text-slate-300 hover:text-blue-400 transition-colors">
+                    +92 (314) 9477077
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="p-3 bg-gradient-to-br from-blue-600/30 to-purple-600/30 rounded-xl">
+                  <MapPin className="w-5 h-5 text-blue-400" />
+                </div>
+                <div>
+                  <p className="text-white font-semibold" style={{ fontFamily: 'Poppins, Inter, sans-serif' }}>Location</p>
+                  <p className="text-slate-300">Islamabad, PK</p>
+                </div>
+              </div>
+            </div>
+            {/* Social Links */}
+            <div className="pt-8">
+              <h4 className="text-lg font-semibold text-white mb-4" style={{ fontFamily: 'Poppins, Inter, sans-serif' }}>
+                Follow Me
+              </h4>
+              <div className="flex gap-4">
+                <a
+                  href="https://github.com/muhammaduzair16"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl text-slate-400 hover:text-white hover:bg-gradient-to-br hover:from-blue-600 hover:to-purple-600 hover:border-blue-500/50 transition-all duration-300"
+                >
+                  <Github className="w-5 h-5" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/muhammad-uzair-07920a294"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-xl text-slate-400 hover:text-white hover:bg-gradient-to-br hover:from-blue-600 hover:to-purple-600 hover:border-blue-500/50 transition-all duration-300"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+            {/* Resume Download */}
+            <div className="pt-4">
+              <a
+                href="/uzairresume.pdf"
+                download
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 shadow-[0_10px_30px_rgba(99,102,241,0.3)] hover:shadow-[0_15px_40px_rgba(99,102,241,0.4)] transition-all duration-300" style={{ fontFamily: 'Poppins, Inter, sans-serif' }}
+              >
+                <Download className="w-5 h-5" />
+                Download Resume
+              </a>
+            </div>
+          </div>
+          {/* Contact Form */}
+          <div className="bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 shadow-[0_20px_40px_rgba(0,0,0,0.3)] relative">
+            <h3 className="text-2xl font-bold text-white mb-6" style={{ fontFamily: 'Poppins, Inter, sans-serif' }}>
+              Send Message
             </h3>
             {showPopup && (
               <div className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-6 py-3 rounded-xl shadow-lg z-20 text-center text-base font-semibold animate-fade-in">
@@ -116,51 +132,75 @@ const Contact = () => {
               </div>
             )}
             <form onSubmit={handleSubmit} className="space-y-6" autoComplete="off">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-white mb-2" style={{ fontFamily: 'Poppins, Inter, sans-serif' }}>
+                    Name
+                  </label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                    className="w-full px-4 py-3 bg-slate-700/50 backdrop-blur-sm border border-slate-600/50 rounded-xl text-white focus:outline-none focus:border-blue-500 focus:bg-slate-600/50 transition-all duration-300"
+                    placeholder="Your Name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-white mb-2" style={{ fontFamily: 'Poppins, Inter, sans-serif' }}>
+                    Email
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    className="w-full px-4 py-3 bg-slate-700/50 backdrop-blur-sm border border-slate-600/50 rounded-xl text-white focus:outline-none focus:border-blue-500 focus:bg-slate-600/50 transition-all duration-300"
+                    placeholder="your@email.com"
+                  />
+                </div>
+              </div>
               <div>
-                <label htmlFor="name" className="block text-slate-200 font-semibold mb-2">
-                  Name
+                <label htmlFor="subject" className="block text-sm font-medium text-white mb-2" style={{ fontFamily: 'Poppins, Inter, sans-serif' }}>
+                  Subject
                 </label>
                 <input
-                  id="name"
-                  name="name"
+                  id="subject"
+                  name="subject"
                   type="text"
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Your Name"
+                  className="w-full px-4 py-3 bg-slate-700/50 backdrop-blur-sm border border-slate-600/50 rounded-xl text-white focus:outline-none focus:border-blue-500 focus:bg-slate-600/50 transition-all duration-300"
+                  placeholder="Project Discussion"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-slate-200 font-semibold mb-2">
-                  Email
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="you@example.com"
-                />
-              </div>
-              <div>
-                <label htmlFor="message" className="block text-slate-200 font-semibold mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-white mb-2" style={{ fontFamily: 'Poppins, Inter, sans-serif' }}>
                   Message
                 </label>
                 <textarea
                   id="message"
                   name="message"
-                  rows={5}
+                  rows={6}
                   required
-                  className="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-700 text-slate-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Type your message here..."
+                  className="w-full px-4 py-3 bg-slate-700/50 backdrop-blur-sm border border-slate-600/50 rounded-xl text-white focus:outline-none focus:border-blue-500 focus:bg-slate-600/50 transition-all duration-300 resize-none"
+                  placeholder="Tell me about your project or opportunity..."
                 ></textarea>
               </div>
               <button
                 type="submit"
-                className="w-full py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg shadow-lg hover:from-blue-700 hover:to-purple-700 transition-all"
                 disabled={loading}
+                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 shadow-[0_10px_30px_rgba(99,102,241,0.3)] hover:shadow-[0_15px_40px_rgba(99,102,241,0.4)] transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50" style={{ fontFamily: 'Poppins, Inter, sans-serif' }}
               >
-                {loading ? "Sending..." : "Send Message"}
+                {loading ? (
+                  <>
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    Send Message
+                  </>
+                )}
               </button>
             </form>
           </div>
